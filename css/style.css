@@ -7,6 +7,10 @@ body {
 
 /* Esercizio 1 */
 
+.esercizio_1{
+  margin-bottom: 50px;
+}
+
 #indirizzo_email{
   width: 250px;
   height: 23px;
@@ -29,6 +33,11 @@ body {
 
 
 /* Esercizio 2 */
+
+.esercizio_2{
+  margin-top: 50px;
+}
+
 #numero_utente{
   width: 70px;
   height: 40px;

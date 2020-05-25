@@ -65,6 +65,8 @@ var risultato = document.getElementById('risultato')
 // Evento cliccando sul botto Scelta
 bottoneScelta.addEventListener('click',
 function () {
+
+  // Assegnazione numero PC e comparazione
   numeroPc = numeroPc.innerHTML = parseInt(Math.floor(Math.random() * 10));
 
   if (numeroUtente.value > numeroPc) {
@@ -82,6 +84,8 @@ function () {
     risultato = risultato.innerHTML = "Hai pareggiato! :-/";
 
   }
+
+  // risultato finale
 
   console.log(risultato);
 
