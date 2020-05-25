@@ -1,0 +1,27 @@
+body {
+  color: #ffffff;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+}
+
+
+
+#indirizzo_email{
+  width: 250px;
+  height: 23px;
+  margin-right: 10px;
+}
+
+
+#btn_invito{
+  font-size: 20px;
+  cursor: pointer;
+}
+/*
+.visible {
+  display: block;
+}
+
+.hidden{
+  display: none;
+} */
