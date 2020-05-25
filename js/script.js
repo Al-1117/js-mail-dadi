@@ -11,6 +11,7 @@ var indirizziEmail = ['marco@gmail.com', 'luca@libero.it', 'laura@hotmail.com', 
 // Messaggio Esito Invito
 bottoneInvito = document.getElementById('btn_invito');
 var esitoInvito = document.getElementById('esito');
+var verifica = false;
 
 
 // Chiedo all'utente la sua email
@@ -24,15 +25,20 @@ bottoneInvito.addEventListener('click',
 function () {
 
   for ( var i = 0; i < indirizziEmail.length; i++ ) {
-    // console.log(indirizziEmail[i]);
     if (indirizziEmail[i] == emailUtente.value) {
+      verifica = true;
       // Esito controllo
-      esitoInvito.innerHTML = "Fai parte degli invitati alla festa, benvenuto! :-)";
-      console.log("Fai parte degli invitati alla festa, benvenuto! :-)");
     }
-    else {
-      esitoInvito.innerHTML = "Mi dispiace, ma non fai parte degli invitati alla festa. Sarà per l'anno prossimo :-(";
-    }
+
+  }
+
+  if (verifica) {
+    esitoInvito.innerHTML = "Fai parte degli invitati alla festa, benvenuto! :-)";
+
+  }
+  else {
+    esitoInvito.innerHTML = "Mi dispiace, ma non fai parte degli invitati alla festa. Sarà per l'anno prossimo :-(";
+
 
 
   }
@@ -50,7 +56,7 @@ function () {
 
 // Scelta numeri
 
-var numeroUtente = parseInt(document.getElementById('numero_utente'));
+var numeroUtente = document.getElementById('numero_utente');
 
 var numeroPc = document.getElementById('numero_pc')
 
@@ -68,26 +74,26 @@ function () {
 
   // Assegnazione numero PC e comparazione
   numeroPc = numeroPc.innerHTML = parseInt(Math.floor(Math.random() * 10));
-
-  if (numeroUtente.value > numeroPc) {
+  numeroUtente = parseInt(numeroUtente.value);
+  if (numeroUtente > numeroPc) {
     risultato = risultato.innerHTML = "Hai vinto! :-)";
 
 
   }
 
-  else if (numeroUtente.value < numeroPc) {
+  else if (numeroUtente < numeroPc) {
     risultato = risultato.innerHTML = "Hai perso! :-(";
 
   }
 
-  else if (numeroUtente.value == numeroPc) {
+  else if (numeroUtente == numeroPc) {
     risultato = risultato.innerHTML = "Hai pareggiato! :-/";
 
   }
 
   // risultato finale
 
-  console.log(risultato);
+  console.log(numeroUtente);
 
 }
 );
