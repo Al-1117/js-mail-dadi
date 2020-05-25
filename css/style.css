@@ -5,6 +5,7 @@ body {
 }
 
 
+/* Esercizio 1 */
 
 #indirizzo_email{
   width: 250px;
@@ -25,3 +26,12 @@ body {
 .hidden{
   display: none;
 } */
+
+
+/* Esercizio 2 */
+#numero{
+  width: 70px;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+}
