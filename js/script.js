@@ -23,7 +23,9 @@ function () {
   for ( var i = 0; i < indirizziEmail.length; i++ ) {
     // console.log(indirizziEmail[i]);
     if (indirizziEmail[i] == emailUtente.value) {
+      // Esito controllo
       esitoInvito.innerHTML = "Fai parte degli invitati alla festa, benvenuto! :-)";
+      console.log("Fai parte degli invitati alla festa, benvenuto! :-)");
     }
     else {
       esitoInvito.innerHTML = "Mi dispiace, ma non fai parte degli invitati alla festa. Sarà per l'anno prossimo :-(";
