@@ -1,3 +1,6 @@
+
+// ESERCIZIO 1
+
 // Array contenente Elenco delle email degli invitati
 
 var indirizziEmail = ['marco@gmail.com', 'luca@libero.it', 'laura@hotmail.com', 'franca@outlook.it', 'severino@gmail.com', 'leonardo@gmail.com', 'pippo@hotmail.com', 'antonio@virgilio.it', 'angela@gmail.com'];
@@ -36,4 +39,51 @@ function () {
 
 }
 
+);
+
+
+
+
+
+
+// ESERCIZIO 2
+
+// Scelta numeri
+
+var numeroUtente = parseInt(document.getElementById('numero_utente'));
+
+var numeroPc = document.getElementById('numero_pc')
+
+// Bottone scelta
+
+var bottoneScelta = document.getElementById('btn_numero');
+
+// Risutato
+
+var risultato = document.getElementById('risultato')
+
+// Evento cliccando sul botto Scelta
+bottoneScelta.addEventListener('click',
+function () {
+  numeroPc = numeroPc.innerHTML = parseInt(Math.floor(Math.random() * 10));
+
+  if (numeroUtente.value > numeroPc) {
+    risultato = risultato.innerHTML = "Hai vinto! :-)";
+
+
+  }
+
+  else if (numeroUtente.value < numeroPc) {
+    risultato = risultato.innerHTML = "Hai perso! :-(";
+
+  }
+
+  else if (numeroUtente.value == numeroPc) {
+    risultato = risultato.innerHTML = "Hai pareggiato! :-/";
+
+  }
+
+  console.log(risultato);
+
+}
 );
